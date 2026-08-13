@@ -4,13 +4,13 @@ Me chamo Gustavo Nunes, e sou profissional da área de Tecnologia da Informaçã
 
 O repositório está organizado da seguinte maneira:
 
-- Projetos
+- Projetos:
 Aqui eu mostro a coleção dos principais projetos onde realizei, com seus respectivos códigos-fonte e a documentação.
 
-- Exercícios
+- Exercícios:
 Nessa seção mostro os exercícios realizados de tamanhos menores, onde pratiquei a programação.
 
-- Estudo
+- Estudo:
 E por fim, deixei disponibilizados arquivos Word sintetizando o aprendizado das atividades realizadas.
 
 Tecnologias
