@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Empresa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main>
+        <section class="container" id="login-container">
+            <h1>Login</h1>
+
+            <label for="username">Usuário</label>
+            <input type="text" id="username" placeholder="Digite seu usuário">
+
+            <label for="password">Senha</label>
+            <input type="password" id="password" placeholder="Digite sua senha">
+
+            <button id="login-btn">Entrar</button>
+        </section>
+
+        <section class="container hidden" id="cadastro-container">
+            <h1>Cadastro da Empresa</h1>
+
+            <label for="empresa">Nome da Empresa</label>
+            <input type="text" id="empresa" placeholder="Digite o nome da empresa">
+
+            <label for="cnpj">CNPJ</label>
+            <input type="text" id="cnpj" placeholder="Digite o CNPJ">
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="Digite o e-mail">
+
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" placeholder="Digite o telefone">
+
+            <label for="endereco">Endereço</label>
+            <input type="text" id="endereco" placeholder="Digite o endereço">
+
+            <label for="atividade">Atividade Principal</label>
+            <input type="text" id="atividade" placeholder="Digite a atividade">
+
+            <button id="cadastrar-btn">Cadastrar</button>
+
+            <p class="success-message hidden" id="success-message">
+                Suas informações foram cadastradas com sucesso!
+            </p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
