@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Calculadora de Datas Avançada</title>
+<link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Calculadora de Calendario</h2>
+
+    <label>Data inicial:</label>
+    <input type="date" id="date1">
+
+    <label>Data final:</label>
+    <input type="date" id="date2">
+
+    <button onclick="calcular()">Calcular Diferença Completa</button>
+
+    <hr>
+
+    <label>Somar/Subtrair dias:</label>
+    <input type="number" id="dias" placeholder="Ex: 10 ou -5">
+    <button onclick="somarDias()">Aplicar</button>
+
+    <div class="result" id="resultado"></div>
+</div>
+
+<script src="Script.js"></script>
+</body>
+</html>
