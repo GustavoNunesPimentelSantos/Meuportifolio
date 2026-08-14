@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Aplicativo de Registro de Ponto</title>
+  <link rel="stylesheet" href="Teste.css">
+</head>
+<body>
+
+  <!-- Container principal do aplicativo -->
+  <div class="app">
+
+    <!-- Card onde ficam todas as informações do registro de ponto -->
+    <div class="card">
+
+      <!-- Título principal da aplicação -->
+      <h1>Batida de Ponto</h1>
+
+      <!-- Área responsável por exibir o horário e a data atual -->
+      <div class="relogio">
+        <div id="hora">00:00:00</div>
+        <div id="data">Carregando...</div>
+      </div>
+
+      <!-- Botões utilizados para registrar entrada e saída -->
+      <div class="acoes">
+        <button class="entrada" onclick="registrarPonto('Entrada')">
+          Registrar Entrada
+        </button>
+
+        <button class="saida" onclick="registrarPonto('Saída')">
+          Registrar Saída
+        </button>
+      </div>
+
+      <!-- Exibe a última batida registrada pelo usuário -->
+      <div class="info">
+        <p><strong>Última batida:</strong></p>
+        <p id="ultimaBatida">N/A</p>
+      </div>
+
+      <!-- Área onde será exibido o histórico de todas as batidas -->
+      <div class="historico">
+        <h2>Histórico de Batidas</h2>
+        <ul id="lista"></ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Arquivo JavaScript responsável pelas funcionalidades do sistema -->
+  <script src="Script.js"></script>
+</body>
+</html>
