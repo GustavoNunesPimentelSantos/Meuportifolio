@@ -1,1 +1,1 @@
-
+Foi realizada uma pesquisa sobre Inteligência Artificial, abordando sua evolução histórica, desde os fundamentos da lógica e da computação até o desenvolvimento das redes neurais e suas aplicações atuais. O estudo também apresenta benefícios e desafios relacionados ao uso da IA, incluindo segurança, privacidade, questões jurídicas e impactos na sociedade.
