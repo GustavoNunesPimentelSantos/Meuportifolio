@@ -10,6 +10,9 @@ Aqui eu mostro a coleção dos principais projetos onde realizei, com seus respe
 - Exercícios:
 Nessa seção mostro os exercícios realizados de tamanhos menores, onde pratiquei a programação.
 
+- Artigo
+Aqui mostro o artigo onde pesquisei e realizei um estudo sobre a aplicação da Inteligência Artificial no mundo.
+
 - Estudo:
 E por fim, deixei disponibilizados arquivos Word sintetizando o aprendizado das atividades realizadas.
 
