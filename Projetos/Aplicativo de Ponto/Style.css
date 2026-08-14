@@ -1,0 +1,100 @@
+/* Configurações gerais da página */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f5f6fa;
+}
+
+/* Centraliza o aplicativo no meio da tela */
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Estilização do cartão principal */
+.card {
+  background: white;
+  width: 400px;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* Estilização do horário */
+.relogio #hora {
+  font-size: 40px;
+  font-weight: bold;
+  color: #1e3a8a;
+}
+
+/* Estilização da data */
+.relogio #data {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Configurações gerais dos botões */
+.acoes button {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* Cor do botão de entrada */
+.entrada {
+  background: #2563eb;
+  color: white;
+}
+
+/* Cor do botão de entrada ao passar o mouse */
+.entrada:hover {
+  background: #1d4ed8;
+}
+
+/* Cor do botão de saída */
+.saida {
+  background: #dc2626;
+  color: white;
+}
+
+/* Cor do botão de saída ao passar o mouse */
+.saida:hover {
+  background: #b91c1c;
+}
+
+/* Área que mostra a última batida registrada */
+.info {
+  margin: 15px 0;
+  background: #f1f5f9;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* Configuração da área do histórico */
+.historico {
+  text-align: left;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+/* Remove o espaçamento padrão da lista */
+.historico ul {
+  padding: 0;
+  list-style: none;
+}
+
+/* Estilização de cada registro do histórico */
+.historico li {
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
