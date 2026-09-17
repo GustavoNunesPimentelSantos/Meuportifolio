@@ -1,1 +1,135 @@
+import json
+import os
 
+ARQUIVO = "contatos.json"
+
+
+def carregar_contatos():
+    if not os.path.exists(ARQUIVO):
+        return []
+
+    with open(ARQUIVO, "r", encoding="utf-8") as arquivo:
+        return json.load(arquivo)
+
+
+def salvar_contatos(contatos):
+    with open(ARQUIVO, "w", encoding="utf-8") as arquivo:
+        json.dump(contatos, arquivo, indent=4, ensure_ascii=False)
+
+
+def adicionar_contato(contatos):
+    print("\n--- Adicionar contato ---")
+
+    nome = input("Nome: ").strip()
+    telefone = input("Telefone: ").strip()
+    email = input("E-mail: ").strip()
+
+    contato = {
+        "nome": nome,
+        "telefone": telefone,
+        "email": email
+    }
+
+    contatos.append(contato)
+    salvar_contatos(contatos)
+
+    print("Contato adicionado com sucesso!")
+
+
+def listar_contatos(contatos):
+    print("\n--- Lista de contatos ---")
+
+    if not contatos:
+        print("Nenhum contato cadastrado.")
+        return
+
+    for numero, contato in enumerate(contatos, start=1):
+        print(f"\n{numero}. {contato['nome']}")
+        print(f"   Telefone: {contato['telefone']}")
+        print(f"   E-mail: {contato['email']}")
+
+
+def buscar_contato(contatos):
+    print("\n--- Buscar contato ---")
+
+    nome = input("Digite o nome: ").strip().lower()
+
+    encontrados = [
+        contato
+        for contato in contatos
+        if nome in contato["nome"].lower()
+    ]
+
+    if not encontrados:
+        print("Contato não encontrado.")
+        return
+
+    for contato in encontrados:
+        print(f"\nNome: {contato['nome']}")
+        print(f"Telefone: {contato['telefone']}")
+        print(f"E-mail: {contato['email']}")
+
+
+def remover_contato(contatos):
+    print("\n--- Remover contato ---")
+
+    if not contatos:
+        print("Nenhum contato cadastrado.")
+        return
+
+    listar_contatos(contatos)
+
+    try:
+        numero = int(input("\nDigite o número do contato que deseja remover: "))
+
+        if numero < 1 or numero > len(contatos):
+            print("Número inválido.")
+            return
+
+        removido = contatos.pop(numero - 1)
+        salvar_contatos(contatos)
+
+        print(f"Contato '{removido['nome']}' removido com sucesso!")
+
+    except ValueError:
+        print("Digite apenas números.")
+
+
+def menu():
+    contatos = carregar_contatos()
+
+    while True:
+        print("\n==========================")
+        print("       MINHA AGENDA")
+        print("==========================")
+        print("1 - Adicionar contato")
+        print("2 - Listar contatos")
+        print("3 - Buscar contato")
+        print("4 - Remover contato")
+        print("5 - Sair")
+        print("==========================")
+
+        opcao = input("Escolha uma opção: ")
+
+        if opcao == "1":
+            adicionar_contato(contatos)
+
+        elif opcao == "2":
+            listar_contatos(contatos)
+
+        elif opcao == "3":
+            buscar_contato(contatos)
+
+        elif opcao == "4":
+            remover_contato(contatos)
+
+        elif opcao == "5":
+            print("Programa encerrado. Até mais!")
+            break
+
+        else:
+            print("Opção inválida. Tente novamente.")
+
+
+if __name__ == "__main__":
+    menu()
