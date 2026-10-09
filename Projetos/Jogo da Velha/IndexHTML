@@ -1,1 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo da Velha</title>
+  <link rel="stylesheet" href="Sheet.css">
+</head>
+<body>
 
+  <h1>🎮 Jogo da Velha</h1>
+
+  <div id="menu">
+    <h2>Escolha o modo</h2>
+    <button onclick="escolherModo('ia')">🤖 VS IA</button>
+    <button onclick="escolherModo('amigo')">👥 VS Amigo</button>
+  </div>
+
+  <div id="escolha" hidden>
+    <h2>Escolha seu símbolo</h2>
+    <button onclick="iniciarJogo('X')">❌ Jogar de X</button>
+    <button onclick="iniciarJogo('O')">⭕ Jogar de O</button>
+    <br>
+    <button onclick="voltarMenu()">⬅ Voltar</button>
+  </div>
+
+  <div id="jogo" hidden>
+    <p id="modo"></p>
+
+    <section id="placar">
+      <div class="ponto">
+        <span id="labelVitorias">Vitórias</span>
+        <strong id="vitorias">0</strong>
+      </div>
+
+      <div class="ponto">
+        <span id="labelDerrotas">Derrotas</span>
+        <strong id="derrotas">0</strong>
+      </div>
+
+      <div class="ponto">
+        <span>Empates</span>
+        <strong id="empates">0</strong>
+      </div>
+    </section>
+
+    <p id="mensagem"></p>
+
+    <div id="tabuleiro">
+      <button class="casa" onclick="jogar(0)"></button>
+      <button class="casa" onclick="jogar(1)"></button>
+      <button class="casa" onclick="jogar(2)"></button>
+      <button class="casa" onclick="jogar(3)"></button>
+      <button class="casa" onclick="jogar(4)"></button>
+      <button class="casa" onclick="jogar(5)"></button>
+      <button class="casa" onclick="jogar(6)"></button>
+      <button class="casa" onclick="jogar(7)"></button>
+      <button class="casa" onclick="jogar(8)"></button>
+    </div>
+
+    <button onclick="reiniciar()">🔄 Nova partida</button>
+    <button onclick="voltarMenu()">⬅ Menu</button>
+    <button onclick="zerarPlacar()">🗑️ Zerar placar</button>
+  </div>
+
+  <script src="JogoJS.js"></script>
+</body>
+</html>
