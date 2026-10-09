@@ -1,1 +1,104 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #17172b;
+  color: white;
+  padding: 25px 10px;
+}
 
+h1 {
+  color: #a78bfa;
+}
+
+button {
+  padding: 12px 18px;
+  margin: 5px;
+  border: none;
+  border-radius: 10px;
+  background: #8b5cf6;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #7c3aed;
+}
+
+#placar {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  max-width: 360px;
+  margin: 20px auto;
+}
+
+.ponto {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  padding: 14px 5px;
+  background: #292944;
+  border-radius: 12px;
+}
+
+.ponto span {
+  font-size: 13px;
+  color: #c4b5fd;
+}
+
+.ponto strong {
+  font-size: 28px;
+}
+
+#tabuleiro {
+  display: grid;
+  grid-template-columns: repeat(3, 90px);
+  gap: 8px;
+  justify-content: center;
+  margin: 25px auto;
+}
+
+.casa {
+  width: 90px;
+  height: 90px;
+  margin: 0;
+  padding: 0;
+  font-size: 38px;
+  font-weight: bold;
+  background: #292944;
+}
+
+.casa:hover {
+  background: #414166;
+}
+
+.casa:disabled {
+  cursor: default;
+  opacity: 0.9;
+}
+
+#mensagem {
+  font-size: 18px;
+  min-height: 24px;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@media (max-width: 350px) {
+  #tabuleiro {
+    grid-template-columns: repeat(3, 78px);
+  }
+
+  .casa {
+    width: 78px;
+    height: 78px;
+  }
+
+  .ponto span {
+    font-size: 11px;
+  }
+}
