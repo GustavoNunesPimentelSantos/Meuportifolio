@@ -1,1 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Mario - Aventura</title>
+    <link rel="stylesheet" href="sheetmario.css">
+</head>
+<body>
 
+    <div class="game-container">
+        <h1>🍄 SUPER MARIO 🍄</h1>
+
+        <div class="hud">
+            <span>🪙 Moedas: <span id="coins">0</span></span>
+            <span>❤️ Vidas: <span id="lives">3</span></span>
+        </div>
+
+        <canvas id="gameCanvas" width="900" height="450"></canvas>
+
+        <div id="message" class="message">
+            <h2>Super Mario</h2>
+            <p>Prepare-se para a aventura!</p>
+            <button id="startButton">JOGAR</button>
+        </div>
+
+        <div class="controls">
+            <button id="leftButton" aria-label="Mover para a esquerda">◀</button>
+            <button id="jumpButton" aria-label="Pular">⬆ PULAR</button>
+            <button id="rightButton" aria-label="Mover para a direita">▶</button>
+        </div>
+
+        <p class="instructions">
+            Use ← → para andar e ESPAÇO para pular.
+            Colete moedas e chegue até a bandeira!
+        </p>
+    </div>
+
+    <script src="javascriptmario.js"></script>
+</body>
+</html>
