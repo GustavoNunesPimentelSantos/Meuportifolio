@@ -1,1 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(#141e30, #243b55);
+    font-family: Arial, sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.game-container {
+    width: 100%;
+    max-width: 950px;
+    text-align: center;
+}
+
+h1 {
+    color: #ffdf00;
+    margin-bottom: 15px;
+    font-size: clamp(24px, 5vw, 38px);
+    text-shadow: 3px 3px #c0392b;
+}
+
+.hud {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding: 12px;
+    background: #202a44;
+    border: 3px solid white;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#gameCanvas {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2 / 1;
+    border: 4px solid white;
+    border-radius: 8px;
+    background: #70c5ff;
+    image-rendering: pixelated;
+}
+
+.message {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: min(85%, 390px);
+    padding: 25px;
+    border: 4px solid white;
+    border-radius: 15px;
+    background: rgba(25, 35, 65, 0.96);
+    box-shadow: 0 0 25px #0008;
+    z-index: 2;
+}
+
+.message h2 {
+    color: #ffdf00;
+    margin-bottom: 12px;
+    font-size: 30px;
+}
+
+.message p {
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.message button {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    background: #e63946;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.message button:hover {
+    background: #ff5b64;
+    transform: scale(1.05);
+}
+
+.game-container {
+    position: relative;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 18px;
+}
+
+.controls button {
+    min-width: 70px;
+    min-height: 55px;
+    padding: 10px 18px;
+    border: 3px solid white;
+    border-radius: 12px;
+    background: #e63946;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    touch-action: none;
+    user-select: none;
+}
+
+.controls button:active {
+    background: #ffdf00;
+    color: #222;
+    transform: scale(0.95);
+}
+
+.instructions {
+    margin-top: 15px;
+    line-height: 1.6;
+    color: #e0eaff;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+        align-items: flex-start;
+    }
+
+    .hud {
+        font-size: 14px;
+    }
+
+    .controls {
+        gap: 10px;
+    }
+    .controls button {
+        min-width: 60px;
+          min-height: 52px;
+        padding: 8px 12px;
+        font-size: 18px;
+    }
+
+    .instructions {
+        font-size: 12px;
+    }
+}
 
